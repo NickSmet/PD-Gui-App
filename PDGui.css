@@ -1,9 +1,13 @@
 
-  #autocomplete{
-    width: 600px;
-    padding: 3px;
-    text-align: left;
-  }
+
+#autocomplete{
+  width: 600px;
+  padding: 3px;
+  text-align: left;
+}
+
+
+ 
   .autocomplete-suggestions { text-align: left; border: 1px solid #999; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; background: #FFF; overflow: auto; }
   .autocomplete-suggestion { padding: 5px 5px; white-space: wrap; overflow: hidden; cursor: pointer;}
   .autocomplete-selected { background: #F0F0F0; }

@@ -5,7 +5,7 @@
 
 // @include      https://support.parallels.com/Ticket/Update.html?Action=Respond&id=*
 
-// @updateURL    http://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PdGuiDepl.user.js
+// @updateURL    	https://gist.github.com/NickSmet/dd2418e13ef80a87e84ef9bc38ec89e3/raw/PdGuiDepl.user.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 
 // @require      https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js

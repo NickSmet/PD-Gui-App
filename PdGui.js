@@ -4,7 +4,6 @@
    function SetUpPdg(){
    var bgt_html = '<div class="pdgui-wrapper">\
    <form action="javascript:void(0)"; class = "pdgui-list"; id="form"; method="get">\
-   <label>PD GUI</label><br>\
    <input type="text" name="country" id="autocomplete" autocomplete="off" placeholder="Type PD GUI element"/>\
    </form>\
    <button class="pdgui-button">\
@@ -14,10 +13,12 @@
    
    
    $("body").append($(bgt_html))
+   $(" #autocomplete").hide()
    $(".pdgui-button").on("click", function() {
 
     
     $(".pdgui-wrapper").toggleClass("expanded");
+    $(" #autocomplete").toggle()
     $('input#autocomplete')[0].focus()
 
     // $('input#autocomplete').get(0).focus()
@@ -43,7 +44,9 @@ $(".autocomplete-suggestions").on("click",function() {
  });
 
  $("#autocomplete").focusout(function() {
-    $(".pdgui-wrapper").removeClass("expanded");
+    $(".pdgui-wrapper, #autocomplete").removeClass("expanded");
+    $(" #autocomplete").hide()
+
  });
 
 
