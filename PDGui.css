@@ -1,0 +1,100 @@
+
+  #autocomplete{
+    width: 600px;
+    padding: 3px;
+    text-align: left;
+  }
+  .autocomplete-suggestions { text-align: left; border: 1px solid #999; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; background: #FFF; overflow: auto; }
+  .autocomplete-suggestion { padding: 5px 5px; white-space: wrap; overflow: hidden; cursor: pointer;}
+  .autocomplete-selected { background: #F0F0F0; }
+  .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+  .autocomplete-group { padding: 2px 5px; }
+  .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+
+
+
+  #wrapper .text {
+    position:relative;
+    bottom:30px;
+    left:0px;
+    visibility:hidden;
+    }
+    
+    #wrapper:hover .text {
+    visibility:visible;
+    }
+    
+    input {
+      width: auto;
+      word-break: break-word;
+    }
+    
+    
+    .pdgui-wrapper {
+      position: fixed;
+      bottom: 45em;
+      right: 4em;
+      text-align: center;
+    }
+    .pdgui-button {
+      height: 4em;
+      width: 4em;
+      font-size: 10px;
+      border-radius: 50%;
+      border: 0 none;
+      background: #ffffff57;
+      color: rgb(53, 53, 53);
+      cursor: pointer;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transform: scale(1);
+      transition: all 200ms ease;
+    }
+    .pdgui-button:hover,
+    .pdgui-button:focus,
+    .pdgui-button:active {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+      outline: 0;
+    }
+    .pdgui-button span {
+      display: block;
+      font-size: 3em;
+      transform: scale(1);
+      transition: transform 100ms ease;
+    }
+    .pdgui-button:hover span,
+    .expanded .pdgui-button span,
+    .expanded .pdgui-button span {
+      transform: scale(1.25);
+    }
+    .expanded .pdgui-button {
+      transform: scale(0.8);
+    
+    }
+    .pdgui-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      transition: all 200ms ease;
+      transform: translate(0, 90px) scale(0.5);
+      transform-origin: bottom center;
+       opacity: 0.0;
+      background-color:rgba(46, 46, 46, 0.35);
+      border-radius: 5px;
+    }
+    .expanded .pdgui-list {
+      transform: translate(0px, 0px) scale(1);
+      opacity: 1;
+    }
+    .pdgui-list li {
+      margin-bottom: 1em;
+    }
+    .pdgui-list a {
+      color: #2e2e2e;
+    }
+    
+    .pdgui-wrapper label {
+      display:inline-block
+    }
+  
+  
