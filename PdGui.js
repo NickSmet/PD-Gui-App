@@ -4,7 +4,7 @@
    function SetUpPdg(){
    var bgt_html = '<div class="pdgui-wrapper">\
    <form action="javascript:void(0)"; class = "pdgui-list"; id="form"; method="get">\
-   <input type="text" name="country" id="autocomplete" autocomplete="off" placeholder="Type PD GUI element"/>\
+   <input type="text" name="country" id="autocomplete" autocomplete="off" placeholder="Type PD GUI element name"/>\
    </form>\
    <button class="pdgui-button">\
    <img src="https://static.techspot.com/images2/downloads/topdownload/2015/03/Parallels.png" style= "display: linline !important; height: 2em; opacity: 0.8;">\
