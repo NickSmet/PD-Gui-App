@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     PD Gui Autocomplete
-// @version            0.5
+// @version            0.6
 // @author 	Nikolai Smetannikov
 
 // @include      https://support.parallels.com/Ticket/Update.html?Action=Respond&id=*
@@ -14,7 +14,7 @@
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js
 
 // @require    https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PdGui.js
-// @resource   PDGuiCSS https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PdGui.css
+// @resource   PDGuiCSS https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PDGui.css
 
 // @run-at       document-end
 
