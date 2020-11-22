@@ -3,6 +3,9 @@
    
    function SetUpPdg(){
    var bgt_html = '<div class="pdgui-wrapper">\
+   <p align="right">\
+   <button id="suggest-button" class="btn btn-light btn-xs"  style="/* background: white; */background-color: rgb(210 219 241 / 81%);color: #7f0505;" >Suggest this</button>\
+   </p>\
    <form action="javascript:void(0)"; class = "pdgui-list"; id="form"; method="get">\
    <input type="text" name="country" id="autocomplete" autocomplete="off" placeholder="Type PD GUI element name"/>\
    </form>\
@@ -13,7 +16,7 @@
    
    
    $("body").append($(bgt_html))
-   $(" #autocomplete").hide()
+   $("#autocomplete").hide()
    $(".pdgui-button").on("click", function() {
 
     
@@ -36,25 +39,66 @@ $('#autocomplete').autocomplete({
     },
 });
 
+
+function SubmitSuggestion(suggestion){
+    let url = "https://script.google.com/macros/s/AKfycbyIieYDWx-25wYZmpEuB4o8j6Tj03c_MjIoMIes/exec"
+    let curr_url = window.location.href
+
+    $.get(url, '&type=PdGui&feedback='+suggestion+'&url='+curr_url.replace("&","%26"))//because url contains '&' which is '%26' in curl (otherwise everything after & is percieved as next parameter)
+   
+   setTimeout(PdGuiToNormal, 1000);
+  
+   $(".pdgui-button").text('Spasiba! :D')
+   $("#suggest-button").hide()
+   $("#form").trigger("reset");
+
+   // Prevent reload page
+  }
+
+
+
+$("#suggest-button").on("click",function() {
+    let suggestion = $("#autocomplete").val()
+    console.log(suggestion);
+    SubmitSuggestion(suggestion)
+    
+ });
+
+
+
 $(".autocomplete-suggestions").on("click",function() {
     GM_setClipboard($(".autocomplete-selected").text())
     // $(".pdgui-wrapper").toggleClass("expanded");
     $(".pdgui-button").text('Copied!')
     setTimeout(PdGuiToNormal, 850);
+    $("#suggest-button").hide()
  });
 
  $("#autocomplete").focusout(function() {
     $(".pdgui-wrapper, #autocomplete").removeClass("expanded");
     $(" #autocomplete").hide()
 
+
+
+
  });
+
+ $("#suggest-button").hide()
+ $("#autocomplete").on('input focus',
+function(){
+if ($(this).val()==""){$("#suggest-button").hide()}
+else{
+  console.log("d")
+  $("#suggest-button").show()}
+
+})
 
 
    }
 function PdGuiToNormal(){
     $(".pdgui-button").html('<img src="https://static.techspot.com/images2/downloads/topdownload/2015/03/Parallels.png" style= "display: linline !important; height: 2em;opacity: 0.8;">')
-    $("#autocomplete").val("");
-  
+    $(".pdgui-wrapper, #autocomplete").removeClass("expanded");
+    $("#autocomplete").val(""); 
 }
   
 

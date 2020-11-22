@@ -11,7 +11,7 @@
 // @require      https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js
 // @resource    bootstrapCSS https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css
 
-// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.9/jquery.autocomplete.min.js
 
 // @require    https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PdGui.js
 // @resource   PDGuiCSS https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PDGui.css
