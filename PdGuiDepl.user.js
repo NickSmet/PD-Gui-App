@@ -1,20 +1,23 @@
 // ==UserScript==
 // @name     PD Gui Autocomplete
-// @version            0.6
+// @version            1.0.0
 // @author 	Nikolai Smetannikov
 
 // @include      https://support.parallels.com/Ticket/Update.html?Action=Respond&id=*
+// @include      https://support.parallels.com/Ticket/Update.html?Action=both&id=*
+// @include      https://support.parallels.com/Ticket/Update.html?Action=Comment&id=*
 
-// @updateURL    	https://gist.github.com/NickSmet/dd2418e13ef80a87e84ef9bc38ec89e3/raw/PdGuiDepl.user.js
+
+// @updateURL    https://github.com/NickSmet/PD-Gui-App/raw/master/PdGuiDepl.user.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
 
 // @require      https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js
 // @resource    bootstrapCSS https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css
 
-// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.9/jquery.autocomplete.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.24/jquery.autocomplete.min.js
 
-// @require    https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PdGui.js
-// @resource   PDGuiCSS https://cdn.jsdelivr.net/gh/NickSmet/Pd-Gui-App@master/PDGui.css
+// @require    https://raw.githubusercontent.com/NickSmet/PD-Gui-App/master/PdGui.js?1
+// @resource   PDGuiCSS https://raw.githubusercontent.com/NickSmet/PD-Gui-App/master/PDGui.css
 
 // @run-at       document-end
 
