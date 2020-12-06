@@ -1,8 +1,11 @@
 /*http://laravel.io/forum/02-08-2014-ajax-autocomplete-input*/
+    var lookupData
 
     function googleCsv2Json(csv){
+       
 
     csv = csv.replace(/\"\,\"/gm,";").replace(/\"/gm,"")
+    
  
     var lines=csv.split("\n");
   
@@ -18,7 +21,7 @@
         for(var j=0;j<headers.length;j++){
 
             if(currentline[j].match('{')){
-                
+                console.log(currentline[j]);
                 currentline[j]=JSON.parse(currentline[j].replace(/(\w+)/gm,'"$1"'))}
             obj[headers[j]] = currentline[j];
         }
@@ -31,7 +34,7 @@
     return result; //JSON
   }
    
-   function SetUpPdg(lookupData){
+   function SetUpPdg(){
    var bgt_html = '<div class="pdgui-wrapper" id="pdguiWrapper">\
    <p align="right">\
    <div class=pdgui-feedback align="right">\
@@ -72,7 +75,7 @@ typeIcons = {
     'pd':'https://insmac.org/uploads/posts/2017-08/1503641514_parallels.png',
     'mac':'https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/OS_Apple.png',
     'win':'https://cdn2.iconfinder.com/data/icons/designer-skills/128/windows-512.png',
-    'undefined':'https://i.dlpng.com/static/png/48540_preview.png',
+    'undefined':'https://cdn3.iconfinder.com/data/icons/gray-toolbar-4/512/query-512.png',
 }
 
 for (const [key, value] of Object.entries(typeIcons)) {
@@ -85,12 +88,12 @@ $('#autocomplete').autocomplete({
     // serviceUrl: '/autosuggest/service/url',
     //lookup: countriesString,
     lookup: lookupData,
-    lookupFilter: function (suggestion, query, queryLowerCase) {
+    // lookupFilter: function (suggestion, query, queryLowerCase) {
 
-        value = suggestion.value.toLowerCase();
+    //     value = suggestion.value.toLowerCase();
         
-        return value.match(queryLowerCase) && suggestion.data.type=="pd" ;
-    },
+    //     return value.match(queryLowerCase) && suggestion.data.type=="pd" ;
+    // },
 
     formatResult: function(suggestion, currentValue){
         return '<img src="'+typeIcons[suggestion.data.type]+'"; title="'+suggestion.data.type+'"  style="display: linline; height: 1.5em"> '+suggestion.value;
@@ -168,6 +171,9 @@ function SubmitSuggestion(kind, suggestion){
 
     $.get(url, '&kind='+kind+'&type='+type+'&content='+suggestion+'&url='+curr_url.replace("&","%26"))//because url contains '&' which is '%26' in curl (otherwise everything after & is percieved as next parameter)
    
+    if(kind=='direct_addition'){lookupData.push({value:suggestion,data:{type:type}})}
+
+
    setTimeout(PdGuiToNormal, 1200);
    $("#autocomplete").hide()
    $(".pdgui-button").text('Sent!')
@@ -193,10 +199,10 @@ $.ajaxSetup({
 
 $.get(requestLink, function ldd(data) {
     
-    let lookupData = googleCsv2Json(data)
+    lookupData = googleCsv2Json(data)
  
       
-    SetUpPdg(lookupData)
+    SetUpPdg()
 
 })
 
