@@ -38,8 +38,8 @@
    var bgt_html = '<div class="pdgui-wrapper" id="pdguiWrapper">\
    <p align="right">\
    <div class=pdgui-feedback align="right">\
-   <button id="suggest" class="btn btn-light btn-xs suggest-button"  style="/* background: white; */background-color: rgb(210 219 241 / 81%);color: #7f0505;" >Send as suggestion</button>\
-   <button id="add" class="btn btn-light btn-xs suggest-button"  style="/* background: white; */background-color: rgb(210 219 241 / 81%);color: #7f0505;" >Add directly</button>\
+   <button id="suggest" class="btn btn-light btn-xs suggest-button"  style="/* background: white; */background-color: rgb(234 234 234 / 46%);color:rgb(0 0 0 / 57%);" >Send as suggestion</button>\
+   <button id="add" class="btn btn-light btn-xs suggest-button"  style="/* background: white; */background-color: rgb(234 234 234 / 46%);color: rgb(29 20 20 / 87%);" >Add directly</button>\
    <select name="types" class = "suggest-button" id="types"></select>\
    </div>\
    </p>\

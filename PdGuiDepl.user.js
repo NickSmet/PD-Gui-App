@@ -6,6 +6,7 @@
 // @include      https://support.parallels.com/Ticket/Update.html?Action=Respond&id=*
 // @include      https://support.parallels.com/Ticket/Update.html?Action=both&id=*
 // @include      https://support.parallels.com/Ticket/Update.html?Action=Comment&id=*
+// @include     https://support.parallels.com/Ticket/Update.html?id=*&QuoteTransaction=*&Action=*
 
 
 // @updateURL    https://github.com/NickSmet/PD-Gui-App/raw/master/PdGuiDepl.user.js
